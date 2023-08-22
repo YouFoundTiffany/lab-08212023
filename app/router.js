@@ -1,19 +1,27 @@
 import { AboutController } from "./controllers/AboutController.js";
 import { HomeController } from "./controllers/HomeController.js";
+import { PlayersController } from "./controllers/PlayersController.js";
 import { ValuesController } from "./controllers/ValuesController.js";
 import { AboutView } from "./views/AboutView.js";
 
-
 export const router = [
+  {
+  path:'',
+  controller: PlayersController,
+  view: /*html*/`
+  <div>It's time for players</div>
+  <section class="row" id="players"></section>`
+  
+  },
   {
     path: '',
     controller: HomeController,
     view: /*html*/`
     <div class="card">
-      <div class="card-body">
-        <p>Home Page</p>
-        <button class="btn btn-dark" onclick="app.HomeController.testButton()">😎</button>
-      </div>
+    <div class="card-body">
+    <p>Home Page</p>
+    <button class="btn btn-dark" onclick="app.HomeController.testButton()">😎</button>
+    </div>
     </div>
     `
   },

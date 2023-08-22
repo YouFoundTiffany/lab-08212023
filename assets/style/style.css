@@ -1,1 +1,10 @@
 /* BASIC STYLES HERE */
+body {
+    background-color: black;
+}
+
+.profPic{
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+}
